@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		568DD9141C27E18B0034CBFD /* BWCurrencyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568DD9131C27E18B0034CBFD /* BWCurrencyPickerView.swift */; };
 		56F730701C27E0E600941962 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F7306F1C27E0E600941962 /* AppDelegate.swift */; };
 		56F730721C27E0E600941962 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F730711C27E0E600941962 /* ViewController.swift */; };
 		56F730751C27E0E600941962 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56F730731C27E0E600941962 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		568DD9131C27E18B0034CBFD /* BWCurrencyPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWCurrencyPickerView.swift; sourceTree = "<group>"; };
 		56F7306C1C27E0E600941962 /* BWCurrencyPickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWCurrencyPickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F7306F1C27E0E600941962 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56F730711C27E0E600941962 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		56F7306E1C27E0E600941962 /* BWCurrencyPickerView */ = {
 			isa = PBXGroup;
 			children = (
+				568DD9131C27E18B0034CBFD /* BWCurrencyPickerView.swift */,
 				56F7306F1C27E0E600941962 /* AppDelegate.swift */,
 				56F730711C27E0E600941962 /* ViewController.swift */,
 				56F730731C27E0E600941962 /* Main.storyboard */,
@@ -96,6 +99,7 @@
 				TargetAttributes = {
 					56F7306B1C27E0E600941962 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 7FZ4M9P9UW;
 					};
 				};
 			};
@@ -135,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				568DD9141C27E18B0034CBFD /* BWCurrencyPickerView.swift in Sources */,
 				56F730721C27E0E600941962 /* ViewController.swift in Sources */,
 				56F730701C27E0E600941962 /* AppDelegate.swift in Sources */,
 			);
@@ -249,10 +254,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BWCurrencyPickerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bastianwirth.BWCurrencyPickerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -260,10 +268,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BWCurrencyPickerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bastianwirth.BWCurrencyPickerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -286,6 +297,7 @@
 				56F730801C27E0E600941962 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

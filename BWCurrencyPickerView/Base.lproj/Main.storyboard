@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BWCurrencyPickerView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,50 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="usQ-jr-iMh" customClass="BWCurrencyPickerView" customModule="BWCurrencyPickerView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="146" width="600" height="454"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBP-jK-2Wj">
+                                <rect key="frame" x="285" y="28" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="A84-6L-tzj"/>
+                                </constraints>
+                                <state key="normal" title="All"/>
+                                <connections>
+                                    <action selector="displayAllPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9sm-JO-bcy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7e-xv-dj7">
+                                <rect key="frame" x="269" y="66" width="63" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4QL-RN-ytZ"/>
+                                </constraints>
+                                <state key="normal" title="Standard"/>
+                                <connections>
+                                    <action selector="displayStandardPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="915-Im-Sh7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="usQ-jr-iMh" firstAttribute="centerX" secondItem="z7e-xv-dj7" secondAttribute="centerX" id="6aF-mX-tB9"/>
+                            <constraint firstItem="usQ-jr-iMh" firstAttribute="top" secondItem="z7e-xv-dj7" secondAttribute="bottom" constant="50" id="Lin-au-Qcb"/>
+                            <constraint firstItem="qBP-jK-2Wj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="PA2-Jf-Myv"/>
+                            <constraint firstItem="usQ-jr-iMh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WBK-aL-H66"/>
+                            <constraint firstItem="qBP-jK-2Wj" firstAttribute="centerX" secondItem="z7e-xv-dj7" secondAttribute="centerX" id="fZe-6y-aDU"/>
+                            <constraint firstAttribute="trailing" secondItem="usQ-jr-iMh" secondAttribute="trailing" id="q9v-oF-irF"/>
+                            <constraint firstItem="usQ-jr-iMh" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="teL-8H-rIC"/>
+                            <constraint firstItem="z7e-xv-dj7" firstAttribute="top" secondItem="qBP-jK-2Wj" secondAttribute="bottom" constant="8" symbolic="YES" id="vv8-fb-FHT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currencyPickerView" destination="usQ-jr-iMh" id="GHk-6C-w2h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="565" y="475"/>
         </scene>
     </scenes>
 </document>
